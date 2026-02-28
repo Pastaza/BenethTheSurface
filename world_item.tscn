@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ldste5f0bqw4"]
+
+[ext_resource type="Texture2D" uid="uid://3pay87bpaui1" path="res://Assets/wood.png" id="1_gubba"]
+[ext_resource type="Script" uid="uid://dos3yt3f7njow" path="res://StickPickUp.gd" id="2_nxexx"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1019280982]
+texture = ExtResource("1_gubba")
+script = ExtResource("2_nxexx")
