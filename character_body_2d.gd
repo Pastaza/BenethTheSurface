@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 
 func _try_step_up(direction: float) -> void:
 	var forward := Vector2(direction, 0.0)
-	var space := get_world_2d().direct_space_state
+	var space: PhysicsDirectSpaceState2D = get_world_2d().direct_space_state
 
 	# Ray 1: Is there a wall directly ahead at our feet?
 	var ray_params := PhysicsRayQueryParameters2D.create(
@@ -73,3 +73,5 @@ func _try_step_up(direction: float) -> void:
 
 	# All clear — snap up!
 	global_position.y -= step_height
+	
+	
