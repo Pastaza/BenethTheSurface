@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://dymdv1hpn6hm2"]
+
+[ext_resource type="Script" uid="uid://bf46cka400tdr" path="res://item.gd" id="1_7mv65"]
+[ext_resource type="Texture2D" uid="uid://c0jubew31iov2" path="res://items/inventorywood.png" id="1_30qhw"]
+
+[resource]
+script = ExtResource("1_7mv65")
+id = "stick"
+name = "Stick"
+description = "Stickey"
+icon = ExtResource("1_30qhw")
+category = "wepon"
+metadata/_custom_type_script = "uid://bf46cka400tdr"

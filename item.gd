@@ -10,4 +10,4 @@ extends Resource
 @export var description: String = ""
 @export var icon: Texture2D = null
 @export var max_stack: int = 64        # 1 = not stackable (weapons, armor, etc.)
-@export var category: String = "misc"  # e.g. "weapon", "consumable", "misc"
+@export var category: String = ""  # e.g. "weapon", "consumable", "misc"
