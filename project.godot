@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="BenethTheSurface"
+run/main_scene="uid://b30bfw1u2win5"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Inventory="*uid://bg0i2wftcq1ig"
 
 [physics]
 
