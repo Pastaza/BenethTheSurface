@@ -20,11 +20,8 @@ scale = Vector2(1.3254381, 0.9927893)
 position = Vector2(492, 121)
 texture = ExtResource("1_3253y")
 
-[node name="CharacterBody2D" parent="." unique_id=1588426925 instance=ExtResource("1_ulcgi")]
+[node name="Player" parent="." unique_id=1588426925 instance=ExtResource("1_ulcgi")]
 position = Vector2(276, 250)
-speed = null
-jump_velocity = null
-step_height = null
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1075585708]
 rotation = -0.0117081925

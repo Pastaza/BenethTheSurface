@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://nawnnea0vpru"]
 
-[ext_resource type="Script" uid="uid://cusbodslhjg8d" path="res://inventory_ui.gd" id="1_gf3dx"]
+[ext_resource type="Script" uid="uid://cusbodslhjg8d" path="res://inventory_system/inventory_ui.gd" id="1_gf3dx"]
 [ext_resource type="PackedScene" uid="uid://c6w7piw4l5e8u" path="res://inventory_slot.tscn" id="2_34y5v"]
 
 [node name="Control" type="Control" unique_id=1596162079]

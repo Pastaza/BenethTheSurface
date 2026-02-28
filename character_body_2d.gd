@@ -10,41 +10,36 @@ var gravity: float = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed:
-		print("Key pressed: ", event.keycode, " F is: ", KEY_F)
+	if event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == KEY_F:
 			_try_pickup()
 
 
 func _try_pickup() -> void:
-	print("--- Trying pickup ---")
-	var inventory_node = get_node("/root/INventory")
+	var inventory_node: Node = null
+	for child in get_tree().root.get_children():
+		if child.name == "INventory":
+			inventory_node = child
+			break
+
 	if inventory_node == null:
-		print("ERROR: Could not find INventory autoload!")
+		print("ERROR: INventory autoload not found!")
 		return
 
 	var item_nodes: Array = get_tree().get_nodes_in_group("items")
-	print("Items found in group: ", item_nodes.size())
-
 	for node in item_nodes:
 		var item_node: Node2D = node as Node2D
 		if item_node == null:
-			print("Node is not Node2D, skipping")
 			continue
-
 		var dist: float = global_position.distance_to(item_node.global_position)
-		print("Distance to item: ", dist)
-
 		if dist <= 100.0:
 			if not item_node.has_meta("item_resource"):
-				print("ERROR: Item node has no item_resource meta!")
+				print("ERROR: No item_resource meta!")
 				continue
-
 			var item = item_node.get_meta("item_resource")
 			if item == null:
-				print("ERROR: item_resource meta is null!")
+				print("ERROR: item_resource is null!")
 				continue
-
 			var leftover: int = inventory_node.add_item(item, 1)
 			if leftover == 0:
 				item_node.queue_free()
@@ -52,8 +47,6 @@ func _try_pickup() -> void:
 			else:
 				print("Inventory full!")
 			return
-		else:
-			print("Too far away: ", dist)
 
 
 func _physics_process(delta: float) -> void:
@@ -63,7 +56,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = jump_velocity
 
-	var direction: float = Input.get_axis("ui_left", "ui_right")
+	var direction := Input.get_axis("ui_left", "ui_right")
 	velocity.x = direction * speed if direction != 0 else move_toward(velocity.x, 0, speed)
 
 	move_and_slide()
