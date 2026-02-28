@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://ld5fr5fjr7wx" path="res://Assets/Rock.png" id="3_3253y"]
 [ext_resource type="PackedScene" uid="uid://ldste5f0bqw4" path="res://world_item.tscn" id="5_m7jmp"]
 [ext_resource type="Texture2D" uid="uid://7tond6kycbv2" path="res://Assets/rocks.png" id="5_y2354"]
+[ext_resource type="PackedScene" uid="uid://cwhhmi622bvke" path="res://world_item2.tscn" id="6_y2354"]
+[ext_resource type="PackedScene" uid="uid://cf5ohstjqhk63" path="res://Worm.tscn" id="7_ni31j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u3cyc"]
 size = Vector2(90, 67.5)
@@ -21,7 +23,7 @@ position = Vector2(492, 121)
 texture = ExtResource("1_3253y")
 
 [node name="Player" parent="." unique_id=1588426925 instance=ExtResource("1_ulcgi")]
-position = Vector2(276, 250)
+position = Vector2(190, 448)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1075585708]
 rotation = -0.0117081925
@@ -291,7 +293,7 @@ position = Vector2(23, 604.25)
 shape = SubResource("RectangleShape2D_u3cyc")
 
 [node name="Sprite2D2" parent="." unique_id=2013312845 instance=ExtResource("5_m7jmp")]
-position = Vector2(779, 549)
+position = Vector2(767, 551)
 scale = Vector2(0.83745664, 0.5539443)
 texture = ExtResource("5_y2354")
 
@@ -304,3 +306,19 @@ texture = ExtResource("5_y2354")
 position = Vector2(465, 550)
 scale = Vector2(0.62109375, 0.58203125)
 texture = ExtResource("5_y2354")
+
+[node name="Sprite2D4" parent="." unique_id=1983233212 instance=ExtResource("6_y2354")]
+position = Vector2(368, 486)
+
+[node name="Sprite2D5" parent="." unique_id=83887657 instance=ExtResource("6_y2354")]
+position = Vector2(88, 544)
+
+[node name="AnimatedSprite2D2" parent="." unique_id=94838430 instance=ExtResource("7_ni31j")]
+position = Vector2(808, 380)
+scale = Vector2(0.40276054, 0.478118)
+
+[node name="AnimatedSprite2D3" parent="." unique_id=1734553711 instance=ExtResource("7_ni31j")]
+position = Vector2(313, 204)
+
+[node name="AnimatedSprite2D" parent="." unique_id=1649514584 instance=ExtResource("7_ni31j")]
+position = Vector2(1002, 429)
