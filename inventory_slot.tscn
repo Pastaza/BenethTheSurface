@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c6w7piw4l5e8u"]
+
+[ext_resource type="Script" uid="uid://bb48h5qnmwg8m" path="res://inventory_slot.gd" id="1_lk1ls"]
+
+[node name="inventory_slot" type="Panel" unique_id=366657220]
+offset_right = 64.0
+offset_bottom = 64.0
+script = ExtResource("1_lk1ls")
+
+[node name="Icon" type="TextureRect" parent="." unique_id=1659467521]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CountLabel" type="Label" parent="." unique_id=394487410]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -23.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
